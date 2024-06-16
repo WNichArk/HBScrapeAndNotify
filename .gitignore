@@ -1,0 +1,50 @@
+# .NET Core
+bin/
+obj/
+vs/
+.vs/
+*.user
+*.rsuser
+*.suo
+*.vsp
+*.pdb
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# User-specific files
+*.swp
+*~
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folders related to NuGet
+*.nupkg
+packages/
+.nuget/
+
+# .NET Core specific
+project.lock.json
+project.fragment.lock.json
+
+# NPM
+node_modules/
+
+# Logs
+*.log
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db

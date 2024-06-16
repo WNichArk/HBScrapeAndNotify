@@ -1,4 +1,6 @@
-﻿namespace HiBidAPI.Models.Communication
+﻿using HiBidAPI.Models.Interfaces;
+
+namespace HiBidAPI.Models.Communication
 {
     public class TextMessage : ICommMessage
     {

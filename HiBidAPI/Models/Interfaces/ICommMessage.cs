@@ -1,4 +1,4 @@
-﻿namespace HiBidAPI.Models.Communication
+﻿namespace HiBidAPI.Models.Interfaces
 {
     public interface ICommMessage
     {

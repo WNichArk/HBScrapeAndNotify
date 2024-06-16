@@ -1,4 +1,4 @@
-﻿using HiBidAPI.Models.Communication;
+﻿using HiBidAPI.Models.Interfaces;
 using HiBidAPI.Models.Utility;
 
 namespace HiBidAPI.Services

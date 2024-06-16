@@ -6,6 +6,7 @@ using System.Web;
 using System.Text.RegularExpressions;
 using System.Net;
 using LiteDB;
+using HiBidAPI.Services.Interfaces;
 
 namespace HiBidAPI.Services
 {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LiteDB;
 
 namespace HiBidAPI.Services.Tests
 {
@@ -14,8 +15,8 @@ namespace HiBidAPI.Services.Tests
         [TestMethod()]
         public void GetHiBidCookiesTest()
         {
-            var scraper = new HiBidScraper(new TwilioService());
-            var cookies = scraper.PopulateHibidHomeCookies();
+            var scraper = new HiBidScraper(new TwilioService(), new LiteDatabase(@"HiBid.db"));
+            scraper.PopulateHibidHomeCookies();
             Assert.Fail();
         }
     }

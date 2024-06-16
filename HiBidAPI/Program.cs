@@ -1,5 +1,8 @@
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using HiBidAPI.Models.HiBid;
+using HiBidAPI.Models.Utility;
 using HiBidAPI.Services;
+using HiBidAPI.Services.Interfaces;
 using LiteDB;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +24,6 @@ var db = new LiteDatabase("HiBid.db");
 builder.Services.AddSingleton<ILiteDatabase>(provider => db);
 var searchColl = db.GetCollection<HiBidSearch>("searches");
 searchColl.EnsureIndex(x => new {x.SearchTerm, x.Radius}, true);
-
-
 var searches = searchColl.FindAll().ToList();
 
 builder.Services.AddSingleton<IHostedService>(provider =>

@@ -1,7 +1,7 @@
 ﻿using HiBidAPI.Models.Interfaces;
 using HiBidAPI.Models.Utility;
 
-namespace HiBidAPI.Services
+namespace HiBidAPI.Services.Interfaces
 {
     public interface ICommService
     {

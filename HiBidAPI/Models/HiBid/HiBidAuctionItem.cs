@@ -1,7 +1,11 @@
-﻿namespace HiBidAPI.Models.HiBid
+﻿using LiteDB;
+
+namespace HiBidAPI.Models.HiBid
 {
     public class HiBidAuctionItem
     {
+        [BsonId]
+        public int Id { get; set; }
         public string Title { get; set; }
         public string CurrentBid { get; set; }
         public string NumberOfBids { get; set; }

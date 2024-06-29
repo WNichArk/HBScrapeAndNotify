@@ -17,7 +17,7 @@
     {
         private Timer _timer;
         private readonly IServiceProvider _serviceProvider;
-        private readonly TimeSpan _interval = TimeSpan.FromMinutes(1440); // Set the interval as needed
+        private readonly TimeSpan _interval = TimeSpan.FromMinutes(10); // Set the interval as needed
         private readonly List<HiBidSearch> _searches;
 
         public HiBidSchedulerService(IServiceProvider serviceProvider, List<HiBidSearch> searches)
@@ -65,7 +65,7 @@
                     }
                 }
 
-                BuildExcelDocument(allItems, $@"c:\TestItems\text.xlsx");
+                BuildExcelDocument(allItems, $@"c:\TestItems\text{DateTime.Now.ToLongDateString}.xlsx");
             }
         }
 

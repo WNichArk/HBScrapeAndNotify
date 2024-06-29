@@ -1,5 +1,6 @@
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using HiBidAPI.Models.HiBid;
+using HiBidAPI.Models.Repositories;
 using HiBidAPI.Models.Utility;
 using HiBidAPI.Services;
 using HiBidAPI.Services.Interfaces;
@@ -17,7 +18,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICommService, TwilioService>();
 builder.Services.AddHttpClient();
 builder.Services.AddTransient<HiBidScraper>();
-
+builder.Services.AddScoped<ISettingsRepository, SettingsRepository>();
+builder.Services.AddScoped<ICommunicationRepository, CommunicationRepository>();
+builder.Services.AddScoped<IHiBidAuctionItemRepository, HiBidAuctionItemRepository>();
 
 //initialize db, inject, get searches for scheduler
 var db = new LiteDatabase("HiBid.db");
